@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise-grade local phishing awareness analyzer for inspecting suspicious links and social engineering lures.">
+    <title>{% block title %}Phishing Awareness Analyzer{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="cyber-body">
+    <!-- Clean, Compact Enterprise Navigation -->
+    <header class="cyber-navbar" role="banner">
+        <div class="nav-container">
+            <a href="/" class="brand-group" aria-label="Phishing Awareness Analyzer Home">
+                <div class="brand-shield" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <span class="brand-title">Phishing Awareness Analyzer</span>
+            </a>
+            <nav class="nav-links" aria-label="Scanner Modes">
+                <button type="button" class="nav-mode-btn active" id="nav-btn-url" data-target="url">URL Scanner</button>
+                <button type="button" class="nav-mode-btn" id="nav-btn-email" data-target="email">Email Analyzer</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="main-container" id="main-content" role="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Professional Minimalist Footer -->
+    <footer class="cyber-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="footer-brand">Phishing Awareness Analyzer</span>
+                <span class="footer-separator">&bull;</span>
+                <span class="footer-subtext">Offline Heuristic Threat Triage</span>
+            </div>
+            <div class="footer-right">
+                <span class="footer-note">All submissions are evaluated in-memory. Zero network traffic is emitted.</span>
+            </div>
+        </div>
+    </footer>
+
+    {% block scripts %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,58 @@
+{
+  "dataset": {
+    "source_path": "data/malicious_phish.csv",
+    "header": [
+      "url",
+      "type"
+    ],
+    "total_processed": 651191,
+    "skipped_records": 0,
+    "execution_time_seconds": 174.36,
+    "throughput_records_per_second": 3734.8
+  },
+  "class_breakdown": {
+    "benign": {
+      "total": 428103,
+      "predicted_threat": 17408,
+      "predicted_clean": 410695
+    },
+    "phishing": {
+      "total": 94111,
+      "predicted_threat": 10295,
+      "predicted_clean": 83816
+    },
+    "malware": {
+      "total": 32520,
+      "predicted_threat": 18453,
+      "predicted_clean": 14067
+    },
+    "defacement": {
+      "total": 96457,
+      "predicted_threat": 206,
+      "predicted_clean": 96251
+    }
+  },
+  "phishing_vs_benign": {
+    "true_positives": 10295,
+    "false_negatives": 83816,
+    "true_negatives": 410695,
+    "false_positives": 17408,
+    "recall": 10.9392,
+    "precision": 37.162,
+    "f1_score": 16.9028,
+    "false_negative_rate": 89.0608,
+    "false_positive_rate": 4.0663,
+    "accuracy": 80.6164
+  },
+  "overall_all_classes": {
+    "total_threats": 223088,
+    "true_positives": 28954,
+    "false_negatives": 194134,
+    "true_negatives": 410695,
+    "false_positives": 17408,
+    "accuracy": 67.5146,
+    "precision": 62.452,
+    "recall": 12.9787,
+    "f1_score": 21.4912
+  }
+}

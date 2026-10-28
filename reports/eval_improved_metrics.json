@@ -1,0 +1,58 @@
+{
+  "dataset": {
+    "source_path": "data/eval_sample.csv",
+    "header": [
+      "url",
+      "type"
+    ],
+    "total_processed": 19999,
+    "skipped_records": 0,
+    "execution_time_seconds": 6.44,
+    "throughput_records_per_second": 3103.3
+  },
+  "class_breakdown": {
+    "benign": {
+      "total": 13148,
+      "predicted_threat": 547,
+      "predicted_clean": 12601
+    },
+    "phishing": {
+      "total": 2890,
+      "predicted_threat": 377,
+      "predicted_clean": 2513
+    },
+    "malware": {
+      "total": 999,
+      "predicted_threat": 564,
+      "predicted_clean": 435
+    },
+    "defacement": {
+      "total": 2962,
+      "predicted_threat": 7,
+      "predicted_clean": 2955
+    }
+  },
+  "phishing_vs_benign": {
+    "true_positives": 377,
+    "false_negatives": 2513,
+    "true_negatives": 12601,
+    "false_positives": 547,
+    "recall": 13.045,
+    "precision": 40.8009,
+    "f1_score": 19.7693,
+    "false_negative_rate": 86.955,
+    "false_positive_rate": 4.1603,
+    "accuracy": 80.9203
+  },
+  "overall_all_classes": {
+    "total_threats": 6851,
+    "true_positives": 948,
+    "false_negatives": 5903,
+    "true_negatives": 12601,
+    "false_positives": 547,
+    "accuracy": 67.7484,
+    "precision": 63.4114,
+    "recall": 13.8374,
+    "f1_score": 22.7175
+  }
+}
